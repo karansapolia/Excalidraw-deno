@@ -1,10 +1,16 @@
+import React, { type FC } from "react"
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+const reactLogo = new URL('./assets/react.svg', import.meta.url).href;
+const viteLogo = new URL('../public/vite.svg', import.meta.url).href;
 import './App.css'
 
-function App() {
+// import * as PercyDOM from "npm:@percy/dom";  
+
+const App: FC = () => {
   const [count, setCount] = useState(0)
+
+  // const domSnapshot = PercyDOM.serializeDOM({ enableJavascript: true });
+  // console.log(domSnapshot)
 
   return (
     <>
